@@ -1,0 +1,114 @@
+<div class="continer">
+    <div class="table">
+        <h2>Employer Information</h2>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Education</th>
+                <th>Exp</th>
+                <th>Salary</th>
+                <th>Position</th>
+                <th>Action</th>
+
+            </thead>
+            <tbody *ngFor="let data of employer">
+                <td>{{data.id}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.gender}}</td>
+                <td>{{data.dob}}</td>
+                <td>{{data.education}}</td>
+                <td>{{data.exp}}</td>
+                <td>{{data.salary}}</td>
+                <td>{{data.position}}</td>
+
+                <td><button (click)="edit(data)" class="edit">Edit</button> | <button (click)="deleteData(data.id)"
+                        class="delete">Delete</button></td>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <!-- form -->
+    <div class="bacground-bl" *ngIf="show">
+        <div class="form">
+            <form [formGroup]="formAllData" (submit)="upDate()">
+                <div class="close"><button (click)="close()">X</button></div>
+                <h3>Update the EmployerInfo </h3>
+                <div class="d-flex js-sb with400" >
+                    <div class="d-flex d-flex-colum">
+                        <div class="d-flex d-flex-colum mar-top-5">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="Name" formControlName="name">
+                        </div>
+                        <div class="d-flex d-flex-colum mar-top-5">
+                            <label for="exp">Experience</label>
+                            <input type="text" id="exp" name="exp" formControlName="exp">
+                        </div>
+                        
+                        <div class="d-flex d-flex-colum mar-top-5" >
+                            <label for="salary">Salary</label>
+                            <input type="text" id="salary" name="Salary" formControlName="salary">
+                        </div>
+
+                        <div class="d-flex d-flex-colum mar-top-5">
+                            <label for="date">DOB</label>
+                            <input type="date" name="date" id="" formControlName="dob">
+                        </div>
+    
+                    </div>
+    
+    
+    
+    
+                    <div class="d-flex d-flex-colum">
+                        
+                        <div class="d-flex d-flex-colum mar-top-5">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="Email" formControlName="email">
+                        </div>
+    
+                        <div class="d-flex d-flex-colum mar-top-5">
+                            <label for="education">Education</label>
+                            <select name="education" id="education" formControlName="education" class="select-ed">
+                    
+                                <option value="Select">Select</option>
+                                <option value="BCA">BCA</option>
+                                <option value="b.tech">b.tech</option>
+                                <option value="B.E">B.E</option>
+                    
+                            </select>
+                        </div>
+                        <div class="d-flex d-flex-colum mar-top-5">
+                            <label for="position">Position</label>
+                            <input type="text" id="position" name="Position" formControlName="position">
+                        </div>
+                        <div class="gender-b-ma mar-top-5">
+                            <label for="gender">gender</label>
+                            <div>
+                                <label for="gender">Male</label><input type="radio" name="gender" id="gender" value="male"
+                                    formControlName="gender">
+                    
+                                <label for="gender">Female</label><input type="radio" name="gender" id="gender" value="female"
+                                    formControlName="gender">
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+<div class="btn">
+    <button type="submit">Update</button>
+</div>
+                
+            </form>
+        </div>
+    </div>
+</div>

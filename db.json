@@ -1,0 +1,16 @@
+{
+  "employerData": [
+    {
+      "name": "jams",
+      "email": "jams@gamil.com",
+      "phone": null,
+      "salary": "12008",
+      "position": "intern",
+      "education": "BCA",
+      "exp": "3",
+      "dob": "2023-09-19",
+      "gender": "male",
+      "id": 1
+    }
+  ]
+}

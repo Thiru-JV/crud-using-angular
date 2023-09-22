@@ -1,0 +1,34 @@
+.continer{
+    width: 100%;
+    height: 50px;
+    background-color: #8bf0ba;
+    
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    
+}
+.max-w{
+    max-width: 1024px;
+    margin: auto;
+}
+button{
+    background-color:#4677ff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold
+}
+button:hover{
+    background-color: #003af9;
+}
+h2{
+    color: #ffffff;
+    
+}
